@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'com.java'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile(
+            "io.netty:netty-all:4.1.15.Final",
+            "com.google.protobuf:protobuf-java:3.3.1",
+            "com.google.protobuf:protobuf-java-util:3.3.1",
+            "org.apache.thrift:libthrift:0.10.0"
+    )
+}
+
