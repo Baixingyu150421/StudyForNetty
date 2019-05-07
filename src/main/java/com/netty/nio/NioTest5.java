@@ -13,7 +13,7 @@ public class NioTest5 {
         byteBuffer.putLong(454535L);
         byteBuffer.putChar('a');
         byteBuffer.putShort((short) 3);
-
+        //如何写入就如何读取
         byteBuffer.flip();
         System.out.println(byteBuffer.getInt());
         System.out.println(byteBuffer.getDouble());
