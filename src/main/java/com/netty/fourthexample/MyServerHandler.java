@@ -10,6 +10,7 @@ public class MyServerHandler extends ChannelInboundHandlerAdapter {
     //用户事件被触发
     @Override
     public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
+        ctx.pipeline().remove(this);
         if(evt instanceof IdleStateEvent){
             IdleStateEvent event = (IdleStateEvent)evt;
             String eventType = null;

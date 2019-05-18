@@ -16,7 +16,8 @@ import java.net.URI;
 /**
  * netty实现http服务器
  */
-public class TestServer {
+public class
+TestServer {
     public static void main(String[] args) {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
@@ -51,6 +52,7 @@ public class TestServer {
                                         response.headers().set(HttpHeaderNames.CONTENT_LENGTH,byteBuf.readableBytes());
                                         ctx.writeAndFlush(response);
                                     }
+                                    ctx.pipeline().fireChannelRead(msg);
                                 }
 
                                 @Override
