@@ -1,15 +1,63 @@
 # Study netty project
-带着问题去学习
+服务端的socket在哪里初始化的？
 
-netty对java中的NIO进行了哪些优化？
+服务端在哪里accept连接的？
 
-netty是如何做到高性能的？
+默认情况下Netty服务端启动多少线程？何时启动？
 
-什么是异步的，事件驱动的编程模型？
+Netty是如何解决jdk空轮询的bug的？
 
-netty对Google protobuf等RPC框架进行了怎么样的支持？
+Netty如何保证异步串行无锁化？
 
-netty的架构是怎样的？（netty的哲学）
+Netty是在哪里检测新连接接入的？
+
+新连接是怎样注册到NioEventLoop线程的？
+
+Netty是如何判断channelHandler类型的？
+
+对于channelHandler的添加应该遵循什么样的顺序？
+
+用户手动触发事件传播，不同的触发方式的区别？
+
+Netty中的内存类别有哪些？
+
+如何减少多线程内存分配之间的竞争？
+
+不同大小的内存是如何进行分配的？
+
+解码器的解码过程？
+
+Netty中的解码器
+
+如何把对象变成字节流，最终写到Socket底层？
+
+编码器的处理逻辑？
+
+Netty中使用到的设计模式有哪些？
+
+Netty中有哪些优化操作？
+
+# Netty的核心组件
+
+Channel
+
+NioEventLoop
+
+ChannelHandler
+
+ByteBuf
+
+Pipeline
+
+Encoder
+
+Decoder
+
+# 优化工具类
+
+FastThreadLocal
+
+Recycler
 
 # goal
 技术的出现势必是要解决实际问题的，但在学习一门新技术时更重要的是去学习它的思想。
